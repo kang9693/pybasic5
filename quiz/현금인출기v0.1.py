@@ -1,56 +1,16 @@
 import os
 import time
 
-#통장잔고= 
-def front_banner():
-	#banner="""
-	#		코리아 IT 현금 인출기 입니다. !!! 
-	#		"""
-	banner="""
-			
-
-			
-			코리아 IT 현금 인출기 입니다.!!!
-			
-			
-			>>> 아무키나 입력해주세요!! <<<
-			
-			
-
-    """
-	print(banner)		
-	#return banner
-	#print(banner)
-
-def ending_banner():
-	#banner="""
-	#		코리아 IT 현금 인출기 입니다. !!! 
-	#		"""
-	banner="""
-			
-
-			
-			코리아 IT 현금 인출기 입니다.!!!
-			
-			
-			>>> 프로그램을 종료 합니다. !!! <<<
-			
-			
-
-    """
-	print(banner)		
-
+###########################################
+from lib import log
+from lib import banner
+from lib import menu
+#from lib.banner import *
 
 #p()	
 #a=banner()
 #print(a.banner())
-prompt="""
-	1. 잔고조회
-	2. 현금인출
-	3. 현금입금
-	4. 계좌이체
-	0. 프로그램종료
-	"""
+
 
 #num = int(input())
 money=1000000 ## 통장잔고 
@@ -61,27 +21,16 @@ Cash_withdrawal=0 # 인출금액
 while True:
 	os.system('cls')  	### DOS 명령어 CLS 명령어 수행
 	#print(banner)  	### 함수 위치 
-	front_banner()	
+	banner.front_banner()	
 	enter = input("현금인출기를 시작 할려면 엔터를 입력해주세요!!!(Q는 현금인출기종료): ")
 		
 	if(enter=='Q'):
 		os.system('cls')
-		ending_banner()
-		#os.system('cls')
-		#while True:
-		#	i=i+1
-		#	a=">"					
-		#	#time.sleep(0.01)
-		#	print(a*i,end="")
-		#	if(i>110):break
+		banner.ending_banner()
 		break
-				
-		
-		#
-		#for i in range(1,10):
-		#	time.sleep(0.5)
-		#	print(">"*i,end="")
-		#break
+	#else:
+	#	print("")
+
 	
 	if not enter:
 		while True:
@@ -91,7 +40,8 @@ while True:
 			os.system('cls')
 			print("===="*5,"===="*5,"==="*5,"==="*5)
 			print("===="*5,"코리아 IT 현금일출기 입니다. ", "===="*5)
-			print( prompt )
+			menu.prompt()
+			#print( prompt )
 		
 			num=int(input("메뉴를 선택해주세요.!!:>>>>"))
 			
@@ -187,63 +137,6 @@ while True:
 							break
 			else:
 				pass
-			''''''
-		
-	
-	
-	#elif(enter==0):
-	#	break
-		
-	
-	#4. 계좌이체
-	
-	
-	
-	#else:
-		
-	
-	
-	#input()
-	#while True:
-	#	i = input("Enter text (or Enter to quit): ")
-	#	if not i:
-	#		break
-	#	print("Your input:", i)
-	#print("While loop has exited")
-	
-	'''
-	os.system("cls")  
-	#print()
-	print(banner)
-	sleep('5')
-	os.system("cls")  
-	print('\n')
-	print('\n')
-	print('\n')
-	print("===="*5,"===="*5,"==="*5,"==="*5)
-	print("===="*5,"코리아 IT 현금일출기 입니다. ", "===="*5)
-	print(prompt)
-	num = int(input('메뉴를 고르세요:'))
-	if(num == 0):
-		break 
-		
-	passwd=input('비밀번호(노출주의):')
-	#if( )	
 
-	if(passwd=='1234'):
-		#print(len(passwd))
-		#os.system("cls") 
-		if num == 1:
-			print("===="*5,"===="*5,"==="*5,"==="*5)
-			print("===="*5,"코리아 IT 현금인출기 잔고조회 메뉴입니다. ", "===="*5)
-			print("잔고조회")	
-			
 		
-		elif num == 2:
-			print("현금인출")
-	else:
-		print("패스워드가 틀렸습니다.!!!")
-	#elif num == 0:
-	#	print("프로그램 종료 ")
-	#	break
-	'''
+	
