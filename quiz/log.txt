@@ -1,0 +1,38 @@
+megmeg10000원 인출이 불가능합니다.10000원 인출이 불가능합니다.10000원 인출이 불가능합니다.
+10000원 인출이 불가능합니다.
+10000원 인출이 불가능합니다.
+시간 간이 추가 
+정확한 시간:June 03 201710000원 인출이 불가능합니다.
+June 03 201710000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.
+ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+June 03 2017 ValueError: invalid literal for int() with base 10: ''
+June 03 2017 10000원 인출이 불가능합니다.
+
+###  함수 
+### 현금인출기에 예외처리 기능 추가 
+### try ecept 를 이용해서 예외처리 기능을 추가
+### 파일인출기록 파일
+### 프로그램 에러로그 파일을 구분해서저장
+### 시간 초가 까지 기록 
+### 함수로 방식으로 구현 
+
+### 함수, 입력출력,  예외처리, 인출현황 로깅  
+### 기능 추가 현황 공유 .. cafe 등등...

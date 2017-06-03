@@ -15,7 +15,7 @@ class Tetris(wx.Frame):
 		self.statusbar.SetStatusText('0')
 		self.board = Board(self)   # 보드 초기화 
 		self.board.SetFocus()
-		self.board.start()
+		#self.board.start()
 
         #self.Centre()
 		self.Center()
