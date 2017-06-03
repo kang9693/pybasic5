@@ -5,18 +5,14 @@ import time
 from lib import log
 from lib import banner
 from lib import menu
-#from lib.banner import *
-
-#p()	
-#a=banner()
-#print(a.banner())
-
+from lib import cash
 
 #num = int(input())
 money=1000000 ## 통장잔고 
 name = '홍길동'  ## 예금주명
 Account_Number='123-456-7890'
 Cash_withdrawal=0 # 인출금액
+pin_count=0
 
 while True:
 	os.system('cls')  	### DOS 명령어 CLS 명령어 수행
@@ -28,58 +24,66 @@ while True:
 		os.system('cls')
 		banner.ending_banner()
 		break
-	#else:
-	#	print("")
 
-	
 	if not enter:
 		while True:
-			
-			
-			#@goto
 			os.system('cls')
 			print("===="*5,"===="*5,"==="*5,"==="*5)
 			print("===="*5,"코리아 IT 현금일출기 입니다. ", "===="*5)
 			menu.prompt()
-			#print( prompt )
-		
-			num=int(input("메뉴를 선택해주세요.!!:>>>>"))
-			
-			if(num!=''):
-				print('%d' %num )
-			
+	
+			try:
+				num=int(input("메뉴를 선택해주세요.!!:>>>>"))	
+			except ValueError as e:
+				msg="ValueError: %s" % e
+				log.log_write('log.txt',msg,'a')
+				#if(ValueError!=''):break	
+
 			#num = int(num)
-			if( num == 0):
-				break				
-			
-			
-			'''
-			if(num == 1):
-				print("1. 잔고조회 입니다. ")	
-				print("While loop has exited")
-			'''
+			#if( num == 0):
+			#	break		
+
 			if (num !=''):
 				##### 패스워드 체크
 				while True:
 					os.system('cls')
-					#enter=input()
 					
 					if(num == 1):
-						print("===="*5,"===="*5,"==="*5,"==="*5)
-						print("===="*5,"현금인출기 잔고 조회 화면입니다. ", "===="*5)
-						print("1. %s 님 잔고조회 입니다. " % name )	
-						print( """
-							예금주명 %s
-							계좌번호 %s
-							계좌잔고 %d
-						"""% (name,Account_Number,money))
+						print("###############################################")
+						print("###############################################")
+						print("##                                           ##")
+						print("##        사용자 인증이 필요한 메뉴 입니다!!!         ##")
+						print("##                                           ##")
+						print("###############################################")
+						print("###############################################")
 						
-						enter=input()
-						if not enter:
+						passwd=str(input("패스워드입력해주세요:"))		
+
+						if(passwd=='1234'):
+							print("===="*5,"===="*5,"==="*5,"==="*5)
+							print("===="*5,"현금인출기 잔고 조회 화면입니다. ","===="*5)
+							print("1. %s 님 잔고조회 입니다. " % name )	
+							print( """
+								예금주명 %s
+								계좌번호 %s
+								계좌잔고 %d
+								""" % (name,Account_Number,money))				
+								
+							enter=input()
+							
+							if not enter:
+								break
+						else:						
+							pin_count=pin_count+1	
+							#time.sleep(1)
+							print("%d회 틀렸습니다.!!" % pin_count)
+							time.sleep(0.5)
+						if(pin_count==5):
+							print("%d 회 틀렸습니다. 메뉴로 돌아갑니다.!!!" % pin_count)
+							pin_count=0
 							break
 				
-				
-					if(num == 2):
+					elif(num == 2):
 						print("===="*5,"===="*5,"==="*5,"==="*5)
 						print("===="*5,"현금인출기 잔고 조회 화면입니다. ", "===="*5)
 						print("\n")
@@ -92,7 +96,7 @@ while True:
 							print("잔고가 부족합니다. !!!")
 						
 						if( Cash_withdrawal < 10000 ):
-							print("10000원 인출이 불가능합니다.")
+							print("10000원 이하는 인출이  불가능합니다.")
 						
 						elif(Cash_withdrawal >= 10000):
 							print(" %d원 을 인출 하시겠습니다.!!! " % Cash_withdrawal )
@@ -112,7 +116,7 @@ while True:
 							print("감사합니다.!!! ")
 							break
 				
-					if(num == 3):		
+					elif(num == 3):		
 						print("===="*5,"===="*5,"==="*5,"==="*5)
 						print("===="*5,"현금인출기 잔고 조회 화면입니다. ", "===="*5)
 						print("\n")
@@ -127,7 +131,7 @@ while True:
 							print("이용해주셔서 감사합니다.!!!")
 							break
 					
-					if(num == 4):
+					elif(num == 4):
 						print("4. 계좌이체 메뉴입니다.")
 						print("이용준비중입니다. 감사합니다...")
 						enter=input()
@@ -135,8 +139,12 @@ while True:
 						
 						if not enter:								
 							break
+							
+					else:
+						pass
 			else:
 				pass
+				#break
 
 		
 	
