@@ -1,11 +1,11 @@
-import os    ### os 시스템 관련된 명령어 및 기능을 사용할때 
+import os
 import time
-from lib import log
-#import
+
 #통장잔고= 
-######################################################
-def banner():   ## 이거 입력 인수 함수 
-	## tab 4
+def front_banner():
+	#banner="""
+	#		코리아 IT 현금 인출기 입니다. !!! 
+	#		"""
 	banner="""
 			
 
@@ -18,22 +18,32 @@ def banner():   ## 이거 입력 인수 함수
 			
 
     """
-	print( banner ) 
-	#result = banner
-	#return result
-########################################################
+	print(banner)		
+	#return banner
+	#print(banner)
 
-#def 함수명(입력인수):   ## 함수 명은 프로그램머가 정하는것이다. 단 규칙에 따라. 
-						 ## PEP 함수 명에 대한 작성 규칙 규칙 작성한다. 
-						 #
-						 # 
-#    수행할 문장1
-#    수행할 문장2
+def ending_banner():
+	#banner="""
+	#		코리아 IT 현금 인출기 입니다. !!! 
+	#		"""
+	banner="""
+			
 
-a= banner()   ## 이런게 작성하는 것을 객체 선언이라고 합니다.
-#print(a)
+			
+			코리아 IT 현금 인출기 입니다.!!!
+			
+			
+			>>> 프로그램을 종료 합니다. !!! <<<
+			
+			
+
+    """
+	print(banner)		
 
 
+#p()	
+#a=banner()
+#print(a.banner())
 prompt="""
 	1. 잔고조회
 	2. 현금인출
@@ -41,8 +51,7 @@ prompt="""
 	4. 계좌이체
 	0. 프로그램종료
 	"""
-passwd='1234'
-passwd_count=0
+
 #num = int(input())
 money=1000000 ## 통장잔고 
 name = '홍길동'  ## 예금주명
@@ -50,24 +59,36 @@ Account_Number='123-456-7890'
 Cash_withdrawal=0 # 인출금액
 
 while True:
-	os.system('cls')   ## 시스템 명령어
-	#print(banner)
-	banner()
-	enter = input("엔터를 입력해주세요!!!(Q는 현금인출기종료): ")
+	os.system('cls')  	### DOS 명령어 CLS 명령어 수행
+	#print(banner)  	### 함수 위치 
+	front_banner()	
+	enter = input("현금인출기를 시작 할려면 엔터를 입력해주세요!!!(Q는 현금인출기종료): ")
 		
 	if(enter=='Q'):
+		os.system('cls')
+		ending_banner()
+		#os.system('cls')
+		#while True:
+		#	i=i+1
+		#	a=">"					
+		#	#time.sleep(0.01)
+		#	print(a*i,end="")
+		#	if(i>110):break
 		break
+				
+		
+		#
+		#for i in range(1,10):
+		#	time.sleep(0.5)
+		#	print(">"*i,end="")
+		#break
 	
 	if not enter:
-	
-	#if (passwd='1234'):
-	
-	
 		while True:
 			
 			
 			#@goto
-			os.system('cls')### 시스템 명령 
+			os.system('cls')
 			print("===="*5,"===="*5,"==="*5,"==="*5)
 			print("===="*5,"코리아 IT 현금일출기 입니다. ", "===="*5)
 			print( prompt )
@@ -94,27 +115,18 @@ while True:
 					#enter=input()
 					
 					if(num == 1):
-						passwd=str(input("패스워드입력해주세요:"))
-						if ( passwd=='1234'):							
-							if(passwd_count==5):break  ## 							
-							print("===="*5,"===="*5,"==="*5,"==="*5)
-							print("===="*5,"현금인출기 잔고 조회 화면입니다. ", "===="*5)
-							print("1. %s 님 잔고조회 입니다. " % name )	
-							print( """
-								예금주명 %s
-								계좌번호 %s
-								계좌잔고 %d
-							"""% (name,Account_Number,money))
-							
-							enter=input()
-							
-							if not enter:
-								break
-						else:
-							print("패스워드 들린회수: %d" % passwd_count)
-							passwd_count=passwd_count+1
-							#print(pas
-							
+						print("===="*5,"===="*5,"==="*5,"==="*5)
+						print("===="*5,"현금인출기 잔고 조회 화면입니다. ", "===="*5)
+						print("1. %s 님 잔고조회 입니다. " % name )	
+						print( """
+							예금주명 %s
+							계좌번호 %s
+							계좌잔고 %d
+						"""% (name,Account_Number,money))
+						
+						enter=input()
+						if not enter:
+							break
 				
 				
 					if(num == 2):
@@ -123,41 +135,24 @@ while True:
 						print("\n")
 						print("2. %d 님 인출가능금액 입니다. " % money )
 						print("\n")
-						try:  	  #예외처리 구분 
-							print("인출금액을입력해주세요!!!")
-							Cash_withdrawal=int(input(">>>"))
-						except ValueError as e:  ## 에러 상황 발생하면 아래구간이 
-							meg = time.strftime("%B %d %Y")+" "+"ValueError: %s" %e 
-							log.log_write('log.txt',meg,'a')
-						#ValueError: invalid literal for int() with base 10: ''
-							print("입력값이 없습니다. 다시 입력해주세요!!!")
-
+						print("인출금액을입력해주세요!!!")
+						Cash_withdrawal=int(input(">>>"))
 						
 						if ( Cash_withdrawal > money ):
-							meg=time.strftime("%B %d %Y")+" "+ "잔고가 부족합니다."	
-								#time.strftime("%B %d %Y")						
 							print("잔고가 부족합니다. !!!")
-							log.log_write('log.txt',meg,'a')   ## a 파일 인출기록 계속 추가해야하니까.
-							
 						
 						if( Cash_withdrawal < 10000 ):
-	
 							print("10000원 인출이 불가능합니다.")
-							meg=time.strftime("%B %d %Y")+ " " + "10000원 인출이 불가능합니다."
-							log.log_write('log.txt',meg,'a')  ## a 생각하는데
-						## logging 모듈 
+						
 						elif(Cash_withdrawal >= 10000):
-							try:  					
-								print(" %d원 을 인출 하시겠습니다.!!! " % Cash_withdrawal )
-							except:
-								print("입력이 정확하지 않습니다.!!!")
-							q = str(input("인출(Y/y), 취소(N/n):"))
+							print(" %d원 을 인출 하시겠습니다.!!! " % Cash_withdrawal )
+							q = str(input("인출(Y), 취소(N)::"))
 							if(q=='Y' or q=='y'):
 								money = money - Cash_withdrawal
 								print(" %d 원 금액을 인출 하시겠습니다.!!! " % Cash_withdrawal )
 								print("잔고 %d원 입니다. .!!! " % money )
-								#| 파이라인 or
-							if(q=='N'or q=='n'): # ||(or연산) y 도 되고 Y 된다.  && (and) 
+								
+							if(q=='N' or q=='n'):
 								break
 						
 						
