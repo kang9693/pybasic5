@@ -19,7 +19,8 @@ if __name__ == "__main__":
 	print("python sys01_crawler.py -u http://www.naver.com")
 	#i=input()
 	#if not i:break
-	sys.argv[1:]
+	sys.argv[1:]  
+	#### 
 	option=args[0]
 	url = args[1]
 	if option==' ':
