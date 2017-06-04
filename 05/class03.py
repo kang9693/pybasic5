@@ -106,4 +106,8 @@ print( a.asecret,b.asecret)
 #print(type(b))
 '''
 
+# 서버 설정 임의 수정 한경우 
+# git 에 올려.
+# 모의해킹  다운 git (내가구축한 깃) 3개월   웹해킹 하는데 
+# 형상관리서버 
 
