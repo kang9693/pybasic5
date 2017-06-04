@@ -1,5 +1,5 @@
 import os
-import time
+import time         
 
 from datetime import datetime
 ###########################################
@@ -29,13 +29,13 @@ while True:
 	enter = input("현금인출기를 시작 할려면 엔터를 입력해주세요!!!(Q는 현금인출기종료): ")
 		
 	if(enter=='Q'):
-		os.system('cls')
+		#os.system('cls') 
 		banner.ending_banner()
 		break
 
 	if not enter:
 		while True:
-			os.system('cls')
+			#os.system('cls')   # 윈도우 cls 실행하는 함수
 			print("===="*5,"===="*5,"==="*5,"==="*5)
 			print("===="*5,"코리아 IT 현금일출기 입니다. ", "===="*5)
 			menu.prompt()
@@ -77,7 +77,10 @@ while True:
 								pin_count=pin_count+1								
 								print("%d회 틀렸습니다.!!" % pin_count)								
 								time.sleep(0.5)  ## 0.5 초간 대기  화면 갱신 속도 조정
+								#del
+								
 							if(pin_count==5):
+								time.sleep(0.5) 
 								print("%d 회 틀렸습니다. 메뉴로 돌아갑니다.!!!" % pin_count)
 								pin_count=0
 								num=''
@@ -145,6 +148,8 @@ while True:
 				else:
 					pass
 					#break
+					
+					
 
 			except ValueError or NameError as e:
 				logging_time=util.log_time(1)
