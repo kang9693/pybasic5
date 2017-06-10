@@ -4,6 +4,9 @@ import sys
 
 # python 실행파일을 만들기 !!!    .exe 파일로 만들어 보세요.
 # 3시 10분까지 해보세요. 
+
+
+
 # ex
 #mkdir c:/workspace/py_5m
 #cd c:\workspace\py_5m 
@@ -15,6 +18,8 @@ import sys
 #git 명령어가 실행이 안되면 아래에서 받으세요 
 #https://git-scm.com/downloads
 # wifi : korea123h
+# 카페주소 
+# http://cafe.naver.com/itpysec
 
 #a= sys.argv[1:]## 외부에 인수 받는것 arguments
 #a=int(a)
