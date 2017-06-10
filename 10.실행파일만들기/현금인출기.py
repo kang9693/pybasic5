@@ -5,7 +5,7 @@ import sys
 # python 실행파일을 만들기 !!!    .exe 파일로 만들어 보세요.
 # 3시 10분까지 해보세요. 
 
-
+D:\workspace\pybasic5\quiz  
 
 # ex
 #mkdir c:/workspace/py_5m

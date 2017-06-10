@@ -1,0 +1,31 @@
+### 
+# 후킹 
+# dll hooking 
+# 안전모드 부팅해서  
+# 프레스가 안보입니다. 
+# ssdt hooking 
+# 안전모드 부팅해서  
+# 메모리 덤프 
+# 메모리를 조사
+
+
+# vol python  이유  머까요.
+# python 프로그램. 윈도우 종속적이지 않게 ?
+# 윈도.. 
+
+## bitcoi  => bitcoin 생산 봇넷   1 coin 300 
+http://www.kmooc.kr/ python  
+# python  
+# C, Java   ~6개월 output 
+# pytho 한달정 결과물 
+
+### python 이용해 포트스캐너 공격도구
+urls=http://news.naver.com/main/main.nhn?mode=LSD&mid=shm&sid1=
+pattern="../../../"  ## for 
+f=open('patter.txt','rb')
+	
+for url in urls:
+	attack=url+pattern
+	r=request.get(attack )
+	attack = 
+

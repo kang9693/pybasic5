@@ -15,3 +15,9 @@ setup(  name = "name",
 ### exe . 
 ### 
 ### 본인 이름이 출력되는 실행파일 
+
+
+예외처리
+#
+#print("" ) python 3.X
+#print " " python 2.X 
