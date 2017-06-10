@@ -11,7 +11,7 @@ import random   # random
 ## wxpython      ##    wxpython 윈도우 스타일 완전히 windows api 를 가져다 쓸수 있음 윈도우와 비슷하게 구현
 ## 참고 python GUI 힘들어.. 이유 화면에 프레임을 그려주는 것이 느리고 깜박임이 심함 로딩 느림
 ## 인터프린터 엔진 
-
+debug_log=print
 class Tetris(wx.Frame):                 ## class   ## wx.Frame < === 화면 그림 그리는네 
     
 	def __init__(self, parent, title):
@@ -26,18 +26,19 @@ class Tetris(wx.Frame):                 ## class   ## wx.Frame < === 화면 그�
 		self.statusbar = self.CreateStatusBar()   ### 상태봐 생성 
 		self.statusbar.SetStatusText('0')
 		self.board = Board(self)   # 보드 초기화 
-		self.board.SetFocus()        
-		#self.board.start()
+		self.board.SetFocus()   
+		
+		self.board.start()
 
-        #self.Centre()
-		self.Center()
+		self.Centre()
+		#self.Center()
 		self.Show(True)
 		
 class Board(wx.Panel):    
     
 	
-	BoardWidth = 10   ## 보드 폭  선언
-	BoardHeight = 22  ## 보드 높이 선언
+	BoardWidth = 10   	## 보드 폭  선언
+	BoardHeight = 22  	## 보드 높이 선언
 	Speed = 300    		### 속도
 	ID_TIMER = 1
 
@@ -71,12 +72,13 @@ class Board(wx.Panel):
 		
 		
 	def shapeAt(self, x, y):
-        
+		#debug_log("(y * Board.BoardWidth) + x:",(y * Board.BoardWidth) + x)
+		x=int(x)
 		return self.board[(y * Board.BoardWidth) + x]   ## 보더 폭 사이즈 제어 
 		
 	
 	def setShapeAt(self, x, y, shape):
-        
+		x=int(x)        
 		self.board[(y * Board.BoardWidth) + x] = shape
 	
 	## 블럭의 크기 제어
@@ -457,6 +459,7 @@ class Tetrominoes(object):
 	SquareShape = 5
 	LShape = 6
 	MirroredLShape = 7	
+
 #if __main__=="__main__":
 app = wx.App()
 Tetris(None, title='Tetris')  # 메인클래스 

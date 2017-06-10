@@ -1,0 +1,10 @@
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/main.html HTTP/1.1" 200 3075
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/negaecon.css HTTP/1.1" 404 301
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/images/ad_index_logintitle.gif HTTP/1.1" 200 32353
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/images/ad_index_loginbtn.gif HTTP/1.1" 200 1471
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/images/ad_index_loginbottom.gif HTTP/1.1" 200 1348
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/images/ad_bg_indexlogin.gif HTTP/1.1" 200 2034
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /rnralsdbwns/images/ad_bg_index.gif HTTP/1.1" 200 1100
+220.88.102.214 - - [04/Mar/2017:22:17:55 +0900] "GET /favicon.ico HTTP/1.1" 404 288
+220.88.102.214 - - [04/Mar/2017:22:18:05 +0900] "GET /rnralsdbwns/index.html HTTP/1.1" 200 3075
+220.88.102.214 127.0.0.1 - [04/Mar/2017:22:18:05 +0900] "GET /rnralsdbwns/negaecon.css HTTP/1.1" 404 301
