@@ -1,6 +1,6 @@
 import os    ### os 시스템 관련된 명령어 및 기능을 사용할때 
 import time
-from lib import log
+from __lib import log
 #import
 #통장잔고= 
 ######################################################

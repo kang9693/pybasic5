@@ -1,0 +1,4 @@
+import os
+## 프로세스 가로체기
+
+os.system("tasklist /f python.exe")
