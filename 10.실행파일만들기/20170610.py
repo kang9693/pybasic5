@@ -1,4 +1,18 @@
+import os
+import sys
 
+#a= sys.argv[1:]## 외부에 인수 받는것 arguments
+#a=int(a)
+#print(a))
+while True:	
+	a=input("숫자입력:")	
+	a=int(a)  # 형변환
+	print("강성훈 입니다.!!!!") 
+	if a==1: break
+
+# python 실행파일을 만들기 ? 
+
+	
 # .py 스크립트 
 # .exe <=== 
 # py2exe   => exe < == 바이러니 파일이라고 합니다. 
@@ -8,7 +22,7 @@
 # 잘안되다. 
 # http://www.dreamy.pe.kr/zbxe/CodeClip/15123
 
-
+# py2exe 
 print("강성훈 입니다.!!!!") 
 '''
 cd c:\workspace\py_5m\
