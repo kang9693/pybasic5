@@ -19,7 +19,7 @@ from email import encoders
 
 
 
-def sendMail():
+def sendMail():    #SMTP  메일 발송 프로토콜 ### 
 	HOST=''
 	
 	sender = "email 주소"			#보내는 메일주소
@@ -42,7 +42,7 @@ def sendMail():
 	#test = 'test'
 	
 	
-	msg.attach(MIMEText(contents))
+	msg.attach(MIMEText(contents))   # 파일첨부 
 	
 	
 	for f in files:
@@ -73,18 +73,13 @@ def send_mail( send_from, send_to, subject, text, files=[], server="", port=25, 
 		msg.attach(part)
 
 	smtp = smtplib.SMTP(server, port)
+	
+	#smtp
    
 	#if isTls: smtp.starttls()
 	#smtp.login(username,password)
 	smtp.sendmail(send_from, send_to, msg.as_string())
 	smtp.quit()
-
-
-   
-	
-	
-	
-
 	
 if __name__ == "__main__":
 	#sendMail()

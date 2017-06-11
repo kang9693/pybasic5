@@ -10,7 +10,8 @@ if a==1:
 	pslist=os.system("tasklist | findstr 현금인출기.exe")  #pslist
 	#print(pslist)
 elif a==2:	
-	pslist=os.popen("tasklist | findstr 현금인출기.exe")  
+	#pslist=os.popen("tasklist | findstr 현금인출기.exe")  
+	pslist=os.popen("dir  1231231.docx")  
 	#<<  ## popen 시스템 명령어 또는 다른 console 명령어를 
 	# 실행결과를 변수로 받을 때 
 	# 지난주에 로그를 기록해보는것을 해보았습니다.

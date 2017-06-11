@@ -5,7 +5,7 @@ import time
 import sqlite3 as sqlite
 #import urllib2
 
-import feedparser
+import feedparser   ## 
 from urllib.request import urlopen
 #import logfile
 
@@ -55,7 +55,7 @@ class RSSRobot:
 
 		feedlist = self.__getFeeds()
 		count = 1
-		urls = logfile.LogFile(os.path.join(self.savedir, "CrawedUrls.log"))
+		#urls = logfile.LogFile(os.path.join(self.savedir, "CrawedUrls.log"))
 		
 		for feed in feedlist:
 			url = feed.rstrip()
