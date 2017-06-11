@@ -2,6 +2,7 @@
 import wx
 import random
 
+
 class Tetris(wx.Frame):
     
 	def __init__(self, parent, title):
@@ -28,14 +29,20 @@ class Board(wx.Panel):
     
 	BoardWidth = 10
 	BoardHeight = 22
-	Speed = 600
+	Speed = 1600
 	ID_TIMER = 1
+	
+	while 
+	#threading 
+	#
 
 	def __init__(self, parent):
 		wx.Panel.__init__(self, parent)        
 		self.initBoard()
         
 	def initBoard(self):    
+	
+		
 
 		self.timer = wx.Timer(self, Board.ID_TIMER)
 		self.isWaitingAfterLine = False
@@ -48,6 +55,8 @@ class Board(wx.Panel):
 
 		self.isStarted = False
 		self.isPaused = False
+		
+		#while 
 
 		self.Bind(wx.EVT_PAINT, self.OnPaint)				      ### 
 		self.Bind(wx.EVT_KEY_DOWN, self.OnKeyDown)				  ###
@@ -464,6 +473,6 @@ class Shape(object):
 		return result
 
 if __name__ == "__main__":
-	app = wx.App()
+	app = wx.App()     ## 무조건 wx.App()
 	Tetris(None, title='Tetris')
-	app.MainLoop()
+	app.MainLoop()   #

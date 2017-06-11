@@ -18,7 +18,7 @@ class MyForm(wx.Frame):
         shiftDown = event.ShiftDown()
  
         print (keycode)
-        if keycode == wx.WXK_SPACE:
+        if keycode == 32:
             print ("you pressed the spacebar!")
         elif controlDown and altDown:
             print (keycode)
